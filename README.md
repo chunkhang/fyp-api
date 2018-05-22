@@ -37,6 +37,7 @@ http://localhost:5000/classes?email=teckminc@sunway.edu.my
 ```json
 {
     "email": "teckminc@sunway.edu.my",
+    "semster": "2018-03-26",
     "subjects": [
         {
             "code": "NET3204",

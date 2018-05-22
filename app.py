@@ -12,6 +12,7 @@ def index():
 def api():
     data = {
         EMAIL: {
+            'semester': '2018-03-26',
             'subjects': [
                 {
                     'code': 'NET3204',
@@ -46,12 +47,15 @@ def api():
         }
     }
     email = request.args.get('email')
+    semester = ''
     subjects = []
     if email is None:
         email = ''
     if email in data:
+        semester = data[email]['semester']
         subjects = data[email]['subjects']
     return jsonify({
         'email': email,
+        'semester': semester,
         'subjects': subjects
     })
