@@ -37,7 +37,7 @@ http://localhost:5000/classes?email=teckminc@sunway.edu.my
 ```json
 {
     "email": "teckminc@sunway.edu.my",
-    "semster": "2018-03-26",
+    "semester": "2018-03-26",
     "subjects": [
         {
             "code": "NET3204",
@@ -74,6 +74,7 @@ http://localhost:5000/classes?email=teckminc@sunway.edu.my
 
 ### Data Types
 - `email`: String
+- `semester`: String
 - `subjects`: Array of Object
 - `code`: String
 - `classes`: Array of Object
