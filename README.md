@@ -11,6 +11,7 @@
 
 ```
 $ pip install -r requirements.txt
+$ python mocker.py
 $ flask run
 $ open http://localhost:5000/
 ```
@@ -31,7 +32,7 @@ Return list of active classes under a specific lecturer
 ### Example
 
 #### Request
-http://localhost:5000/classes?email=teckminc@sunway.edu.my
+GET `http://localhost:5000/classes?email=teckminc@sunway.edu.my`
 
 #### Response
 ```json
