@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request, jsonify
+from flask import Flask, url_for, request, jsonify
 import json
 
 
@@ -11,14 +11,14 @@ with open('data.json', 'r') as file:
 # Index
 @app.route('/', methods=['GET'])
 def index():
-    return redirect(url_for('lecturers'))
-
-
-# List all lecturers
-@app.route('/lecturers', methods=['GET'])
-def lecturers():
-    lecturers = list(data.keys())
-    return jsonify(lecturers)
+    html = '<ol>'
+    for lecturer_email in list(data.keys()):
+        html += '<li><a href="{}" target="_blank">{}</a></li>'.format(
+            url_for('classes', email=lecturer_email),
+            lecturer_email
+        )
+    html += '</ol>'
+    return html
 
 
 # List classes under lecturer
