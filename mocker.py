@@ -12,10 +12,10 @@ def main():
     length_of_lecturer_id = 5
     number_of_lecturers = 15
     subjects_per_lecturer = (0, 2)
-    students_per_subject = (5, 100)
+    students_per_subject = (20, 80)
     class_limits = {
-        'Lecture': 50,
-        'Practical': 30
+        'Lecture': 40,
+        'Practical': 20
     }
     max_subjects_per_student = 4
     # Totals
