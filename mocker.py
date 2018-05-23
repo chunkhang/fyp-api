@@ -14,8 +14,8 @@ def main():
     subjects_per_lecturer = (0, 2)
     students_per_subject = (20, 80)
     class_limits = {
-        'Lecture': 40,
-        'Practical': 20
+        'lecture': 40,
+        'practical': 20
     }
     max_subjects_per_student = 4
     # Totals
@@ -97,7 +97,7 @@ def main():
                 random.shuffle(chunks)
                 for i, chunk in enumerate(chunks):
                     class_ = {
-                        'category': category,
+                        'category': category.capitalize(),
                         'group': i+1,
                         'students': chunk
                     }
