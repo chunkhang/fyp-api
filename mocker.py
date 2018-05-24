@@ -6,7 +6,7 @@ import json
 def main():
     '''Generate mock data and write to json file'''
     # Variables
-    file_name = 'data'
+    file_name = 'classes'
     domain = 'sunway.edu.my'
     semester = '2018-03-26'
     length_of_lecturer_id = 5
