@@ -7,10 +7,17 @@ def main():
     '''Generate mock data and write to json file'''
     # Variables
     file_name = 'classes'
-    domain = 'sunway.edu.my'
+    domain = 'imail.sunway.edu.my'
     semester = '2018-03-26'
-    length_of_lecturer_id = 5
-    number_of_lecturers = 15
+    lecturer_ids = [
+        '13079272',
+        '15053648',
+        '16080111',
+        '15061567',
+        '15071863',
+        '15075153',
+        '15073141'
+    ]
     subjects_per_lecturer = (0, 2)
     students_per_subject = (20, 80)
     class_limits = {
@@ -20,7 +27,7 @@ def main():
     max_subjects_per_student = 4
     # Totals
     totals = {
-        'lecturers': number_of_lecturers,
+        'lecturers': len(lecturer_ids),
         'subjects': 0,
         'classes': 0,
         'students': 0
@@ -28,13 +35,8 @@ def main():
     # Emails
     print('Generating emails...', end=' ', flush=True)
     emails = []
-    for _ in range(number_of_lecturers):
-        while True:
-            id_ = ''.join([random.choice(list(string.ascii_lowercase))
-                           for _ in range(length_of_lecturer_id)])
-            email = '{}@{}'.format(id_, domain)
-            if email not in emails:
-                break
+    for lecturer_id in lecturer_ids:
+        email = '{}@{}'.format(lecturer_id, domain)
         emails.append(email)
     print('Done!')
     # Subjects
