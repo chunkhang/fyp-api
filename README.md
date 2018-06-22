@@ -11,9 +11,14 @@
 
 ```
 $ pip install -r requirements.txt
-$ python mocker.py
 $ flask run
 $ open http://localhost:5000/
+```
+
+## Generating Data
+
+```
+$ python mocker.py
 ```
 
 ## Endpoint
